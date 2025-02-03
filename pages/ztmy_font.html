@@ -1,0 +1,57 @@
+<style>
+    @font-face {
+        font-family: 'ZTMY-Font';
+        src: url('/static/font/ZTMY_MOJI-R.otf') format('opentype');
+    }
+
+    .font-preview {
+        border: 1px solid #ddd;
+        padding: 10px;
+        white-space: pre-wrap;
+        /* 空白や改行をそのまま反映させる */
+    }
+
+    #inputText {
+        width: 100%;
+        /* 横幅100%に設定 */
+        box-sizing: border-box;
+        /* パディングと境界を含む幅の計算 */
+        overflow: hidden;
+        /* 自動高さ調整のためにスクロールバーを非表示に */
+        resize: none;
+        /* 手動サイズ変更を無効化 */
+        field-sizing: content;
+        /* 高さを自動調整 */
+    }
+
+    .ztmy_font {
+        font-family: 'ZTMY-Font';
+    }
+</style>
+
+<div class="contents_block">
+    <h1>ずとまよフォント</h1>
+</div>
+<div class="contents_block contents_block_has_a">
+    <textarea id="inputText" rows="5" placeholder="ここにテキストを入力"></textarea>
+
+    <div id="previews">
+        <div id="font1" class="font-preview ztmy_font"></div>
+    </div>
+</div>
+
+<div class="contents_block">
+    <img src="/static/img/JINKOUGAKU_moji.jpg" alt="JINKOUGAKU_moji">
+    <a href="https://zutomayo.net/font/">https://zutomayo.net/font/</a>
+</div>
+
+
+<script>
+    document.getElementById('inputText').addEventListener('input', function () {
+        const inputText = this.value;
+        document.getElementById('font1').textContent = inputText;
+    });
+
+    // 初期化
+    document.getElementById('inputText').dispatchEvent(new Event('input'));
+</script>

@@ -1,0 +1,44 @@
+/*--------------------
+code
+--------------------*/
+pre {
+    margin: 0;
+    /* white-space: pre-wrap; */
+}
+
+.code_title {
+    /* div */
+    margin: 5px 5px -5px 5px;
+}
+
+.code_title>span {
+    background-color: rgba(100, 100, 100, 0.9);
+    padding: 3px 6px;
+    font-size: 14.4px;
+    color: #ffffff
+}
+
+.code_block {
+    font-size: 14.4px;
+    margin: 5px 5px 5px 5px;
+    background-color: rgba(50, 50, 50, 0.5) !important;
+}
+
+/* 行番号 */
+pre {
+    counter-reset: rowNumber;
+}
+
+pre span.row-number {
+    counter-increment: rowNumber;
+}
+
+pre span.row-number::before {
+    content: counter(rowNumber);
+    font-size: 14.4px;
+    width: 20px;
+    margin-right: 12px;
+    display: inline-block;
+    color: #aaa;
+    text-align: right;
+}

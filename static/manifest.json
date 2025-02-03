@@ -1,0 +1,10 @@
+{
+    "name": "tatsu raspberry-pi app",
+    "short_name": "tatsu",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "theme_color": "#0C1128",
+    "background_color": "#0C1128",
+    "orientation": "any"
+}
