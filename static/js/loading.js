@@ -19,7 +19,7 @@ $(function () {
 
         if (pathQuery) {
             var path = pathQuery.replace(/\./g, '/');
-            $.get("pages/" + path + ".html")
+            $.get("pages/" + path + ".html?nocache=" + new Date().getTime())
                 .done(function (data) {
                     $("#contents").html(data);
 

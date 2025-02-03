@@ -1,10 +1,16 @@
 {
-    "name": "tatsu raspberry-pi app",
+    "name": "tatsu Homepage",
     "short_name": "tatsu",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
     "theme_color": "#0C1128",
     "background_color": "#0C1128",
-    "orientation": "any"
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "/static/apple-touch-icon.png",
+            "sizes": "180x180"
+        }
+    ]
 }
