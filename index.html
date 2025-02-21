@@ -50,7 +50,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="/static/js/loading.js" data-load_page="true"></script>
+    <script src="/static/js/loading.js"></script>
     <script src="/static/js/menu.js"></script>
     <script src="/static/js/para.js"></script>
     <script src="/static/js/pwabuttons.js"></script>
@@ -74,7 +74,7 @@
         }
     </style>
     <!-- tatsu head end -->
-    <title>tatsu</title>
+    <title>Raspberry Pi</title>
 
 </head>
 
@@ -110,6 +110,17 @@
                         <div class="menu_sub">- TOP -</div>
                     </a>
                 </div>
+                <!-- <div class="menu_element">
+                    <a class="menu_a" id="menu_hard_reload">
+                        <div class="menu_name">hard reload</div>
+                    </a>
+                    <script>
+                        $('#menu_hard_reload').click(function (e) {
+                            e.preventDefault(); // デフォルトのリンク動作をキャンセル
+                            location.reload(); // ページをリロード(ハードリロード?)
+                        });
+                    </script>
+                </div> -->
             </div>
         </div>
 
@@ -132,27 +143,8 @@
 
         <div id="main" style="display: none;">
             <div id="contents">
-                <div class="contents_block">
-                    <h1>tatsu homepage</h1>
-                </div>
 
-                <div class="contents_block contents_block_has_a">
-                    <a class="contents_block_a" href="https://mothlamp.info/"></a>
-                    <h3>誘蛾灯の導き</h3>
-                    <p>ファントムシータ非公式ファンサイト</p>
-                </div>
-
-                <div class="contents_block contents_block_has_a">
-                    <a class="contents_block_a" href="?p=profile"></a>
-                    <p>Profile</p>
-                </div>
-
-                <div class="contents_block contents_block_has_a">
-                    <a class="contents_block_a" href="?p=ztmy_font"></a>
-                    <p>ZTMY font</p>
-                </div>
             </div>
-
 
             <div>
                 <img src="/static/logo/tatsu-logo-no-bg.png" alt="logo" class="bottom_logo">
