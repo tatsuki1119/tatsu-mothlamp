@@ -57,6 +57,10 @@
     <script src="/static/js/pwabuttons.js"></script>
     <script src="/static/js/reload.js"></script>
 
+    <script>
+        $('head').append('<script src="/static/js/async-load-twitter.js?nocache=' + new Date().getTime() + '" />');
+    </script>
+
     <style>
         #bg_1 {
             background-image: url("/static/img/bg/bg_1.png");
