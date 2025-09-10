@@ -1,5 +1,5 @@
 /*==================================================
-tatsu css update 25.02.11
+tatsu css update 25.09.10
 
 〇 目次
     - height コンテンツ全体の高さ関連
@@ -13,6 +13,7 @@ tatsu css update 25.02.11
     - loading
     - modal
     - popupimg-modal
+    - media-flex
     - bg para
     - pwa
     - captures
@@ -295,6 +296,7 @@ contents
 }
 
 .contents_block_has_a:hover {
+    animation: none;
     background-color: rgba(100, 100, 100, 0.5) !important;
 }
 
@@ -687,6 +689,38 @@ popupimg-modal
 #popupimg-modal-orig-link:hover {
     color: #ffffff;
     text-decoration: underline;
+}
+
+
+/*--------------------
+media-flex
+--------------------*/
+
+.media-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.media-flex-container>div {
+    position: relative;
+    width: calc((100% - 10px) / 2);
+    aspect-ratio: 1/1;
+
+    @media screen and (min-width: 767px) {
+        width: calc((100% - 20px) / 3);
+    }
+}
+
+.media-flex-container>div>img,
+.media-flex-container>div>video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
 }
 
 
